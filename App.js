@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button, ScrollView } from "react-native";
 import React, { useState } from "react";
 
 export default function App() {
@@ -7,6 +7,16 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.cityCon}>
         <Text style={styles.city}>서울</Text>
+      </View>
+      <ScrollView horizontal contentContainerStyle={styles.weather}>
+      <View style={styles.weatherInner}>
+        <View style={styles.day}>
+          <Text style={styles.regDate}>9월 11일, 목, 14:20</Text>
+          <Text style={styles.desc}>맑음</Text>
+        </View>
+        <View style={styles.tempCon}>
+          <Text style={styles.temp}>24º</Text>
+        </View>
       </View>
       <View style={styles.weatherCon}>
         <View style={styles.day}>
@@ -17,6 +27,35 @@ export default function App() {
           <Text style={styles.temp}>24º</Text>
         </View>
       </View>
+      <View style={styles.weatherCon}>
+        <View style={styles.day}>
+          <Text style={styles.regDate}>9월 11일, 목, 14:20</Text>
+          <Text style={styles.desc}>맑음</Text>
+        </View>
+        <View style={styles.tempCon}>
+          <Text style={styles.temp}>24º</Text>
+        </View>
+      </View>
+      <View style={styles.weatherCon}>
+        <View style={styles.day}>
+          <Text style={styles.regDate}>9월 11일, 목, 14:20</Text>
+          <Text style={styles.desc}>맑음</Text>
+        </View>
+        <View style={styles.tempCon}>
+          <Text style={styles.temp}>24º</Text>
+        </View>
+      </View>
+            <View style={styles.weatherCon}>
+        <View style={styles.day}>
+          <Text style={styles.regDate}>9월 11일, 목, 14:20</Text>
+          <Text style={styles.desc}>맑음</Text>
+        </View>
+        <View style={styles.tempCon}>
+          <Text style={styles.temp}>24º</Text>
+        </View>
+      </View>
+      </ScrollView>
+
     </View>
   );
 }
@@ -37,7 +76,10 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
   },
-  weatherCon: {
+  weather: {
+    backgroundColor: "blue",
+  },
+  weatherInner: {
     flex: 1,
   },
   day: {
